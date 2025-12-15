@@ -1,0 +1,34 @@
+# ===== Build =====
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+compile_commands.json
+
+# ===== Binaries =====
+*.o
+*.a
+*.so
+CamApp
+
+# ===== Qt =====
+.moc/
+.ui/
+.qrc
+*.qmlc
+*.qmlcache
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.user
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs / temp =====
+*.log
+*.tmp
