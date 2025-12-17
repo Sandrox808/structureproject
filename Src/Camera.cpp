@@ -4,10 +4,12 @@
 // Costruttore pipeline
 Camera::Camera() {
     
-    // Full HD a 60fps 
-    pipeline = "libcamerasrc ! video/x-raw, format=NV12, width= 640, height=480, framerate=120/1 ! "
-           "videoconvert ! video/x-raw, format=BGR ! "
-           "appsink drop=true";
+pipeline =
+    "v4l2src device=/dev/video0 ! "
+    "video/x-raw, width=640, height=480, framerate=30/1 ! "
+    "videoconvert ! "
+    "video/x-raw, format=BGR ! "
+    "appsink drop=true sync=false";
 }
 
 // Distruttore
