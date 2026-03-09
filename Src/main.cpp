@@ -38,6 +38,7 @@ int main() {
 
     Display Screen2("Originale");
     Display Screen3("Mix&Match");
+    Display disp("Camera Feed");
 
     // Avvio Camera
     if (!myCam.start()) {
@@ -89,6 +90,7 @@ int main() {
         Screen2.show(frame);
         //LeScreen.show(grayFrame);
         Screen3.show(frameframe);
+         disp.show(frame); 
 
         if (myScreen.checkExitKey()) {
             break;

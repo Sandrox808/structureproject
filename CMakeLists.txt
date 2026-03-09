@@ -7,6 +7,14 @@ project(StructuredProject LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# ========================= 
+# Impostazioni Qt (Automatiche)
+# =========================
+# Fondamentale per la compilazione dei file che usano Q_OBJECT, file .ui e risorse .qrc
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
 # =========================
 # OpenCV
 # =========================
@@ -14,6 +22,12 @@ set(OpenCV_DIR "/usr/local/lib/cmake/opencv4"
     CACHE PATH "Path to OpenCVConfig.cmake")
 
 find_package(OpenCV REQUIRED)
+
+# =========================
+# Qt
+# =========================
+
+
 
 # =========================
 # Sorgenti
